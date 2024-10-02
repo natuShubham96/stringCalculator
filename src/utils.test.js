@@ -1,4 +1,4 @@
-import { fetchNumbers, isNumber, isWhiteSpaceCharacter } from "./utils"
+import { add, fetchNumbers, isNumber, isWhiteSpaceCharacter } from "./utils"
 
 describe("testing utility functions", () => {
     describe("checking for number type validity", () => {
@@ -37,19 +37,19 @@ describe("testing utility functions", () => {
 
     describe("testing add functionality", () => {
         test("returning 0 when empty string is passed", () => {
-
+            expect(add('')).toBe(0);
         })
 
         test("returning 0 when no number present for addition in the string", () => {
-
+            expect(add('\n;//,')).toBe(0);
         })
 
         test("throwing exceptipn when negative numbers present", () => {
-
+            expect(() => add('\n-1;-2,1,4')).toThrow('negative numbers not allowed -1,-2');
         })
 
         test("returning sum of positive numbers", () => {
-            
+            expect(add('\n1;2,1,42')).toBe(46);
         })
     })
 })

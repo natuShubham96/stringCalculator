@@ -34,4 +34,22 @@ describe("testing utility functions", () => {
             expect(fetchNumbers('\n1;//2,3')).toHaveLength(3);
         })
     })
+
+    describe("testing add functionality", () => {
+        test("returning 0 when empty string is passed", () => {
+
+        })
+
+        test("returning 0 when no number present for addition in the string", () => {
+
+        })
+
+        test("throwing exceptipn when negative numbers present", () => {
+
+        })
+
+        test("returning sum of positive numbers", () => {
+            
+        })
+    })
 })

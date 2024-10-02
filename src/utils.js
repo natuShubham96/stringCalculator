@@ -35,10 +35,12 @@ function add(numbers) {
     if(!fetchedPositiveNumbers.length) return result;
     
     result = fetchedPositiveNumbers.reduce((acc, fetchedPositiveNumber) => {
-        acc = acc + parseInt(fetchedPositiveNumber);
+        const parsedNumber = parseInt(fetchedPositiveNumber);
+        if(parsedNumber <= 1000)
+        acc = acc + parsedNumber;
         return acc;
     },0);
-    
+
     return result;
 }
 

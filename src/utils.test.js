@@ -51,5 +51,9 @@ describe("testing utility functions", () => {
         test("returning sum of positive numbers", () => {
             expect(add('\n1;2,1,42')).toBe(46);
         })
+
+        test('numbers greater than 1000 are ignored in calculation', () => {
+            expect(add('\n1,5,1005')).toBe(6);
+        })
     })
 })
